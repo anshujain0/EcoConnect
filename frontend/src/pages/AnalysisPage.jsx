@@ -39,7 +39,7 @@ function AnalysisPage() {
     try {
       console.log('Calling locations API with:', latitude, longitude);
       const response = await axios.post(
-        `http://localhost:5000/api/analysis/${id}/locations`,
+        `https://ecoconnect-xzvo.onrender.com/api/analysis/${id}/locations`,
         { latitude, longitude }
       );
       if (response.data.success) {
@@ -115,7 +115,7 @@ function AnalysisPage() {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:5000/api/feedback', {
+      const response = await axios.post('https://ecoconnect-xzvo.onrender.com/api/feedback', {
         analysisId: id,
         rating: feedback.rating,
         comment: feedback.comment,
@@ -152,7 +152,7 @@ function AnalysisPage() {
           <div className="flex flex-col md:flex-row gap-6">
             <div className="w-full md:w-64 h-64 rounded-lg overflow-hidden border-2 border-soft-green shadow-md flex-shrink-0 bg-gray-100">
               <img
-                src={`http://localhost:5000/${analysis.imageUrl.replace(/\\/g, '/')}`}
+                src={`https://ecoconnect-xzvo.onrender.com/${analysis.imageUrl.replace(/\\/g, '/')}`}
                 alt={analysis.itemName}
                 className="w-full h-full object-cover"
                 onError={(e) => {

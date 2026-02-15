@@ -28,7 +28,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://ecoconnect.vercel.app',
+    'https://ecoconnect-ai.vercel.app',
     process.env.FRONTEND_URL
   ],
   credentials: true
